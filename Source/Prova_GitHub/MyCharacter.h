@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -9,33 +7,27 @@
 UCLASS()
 class PROVA_GITHUB_API AMyCharacter : public ACharacter
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	AMyCharacter();
+    AMyCharacter();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
 
 public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+    virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	// Movimento avanti
-	void MoveForward(float Value);
+    // Movimento avanti
+    void MoveForward(float Value);
 
-	// Salto
-	void StartJump();
-	void StopJump();
+    // Salto
+    void StartJump();
+    void StopJump();
 
 protected:
-	// Configurazioni di movimento
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float JumpHeight = 600.0f; // Altezza del salto
-};
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    float JumpHeight = 600.0f; // Altezza del salto
 };
