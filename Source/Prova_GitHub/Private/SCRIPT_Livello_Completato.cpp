@@ -11,7 +11,7 @@
 * =======================================================================================================================
 */
 
-/*
+
 #include "SCRIPT_Livello_Completato.h"
 #include "Components/BoxComponent.h" // Include la definizine della classe "UBoxComponent", necessaria per creare il volume della collisione
 
@@ -33,7 +33,7 @@ ASCRIPT_Livello_Completato::ASCRIPT_Livello_Completato()
 	*	Imposto le dimensioni del "TriggerBox" a 100 unità per gli assi X,Y, e Z.
 	*	Poi collego la funzione "OnPlayerOverlap" all'evento "OnComponentBeginOverlap" del box di collisione	 
 	*/
-	/*TriggerBox->SetBoxExtent(FVector(100.0f, 100.0f, 100.0f));
+	TriggerBox->SetBoxExtent(FVector(100.0f, 100.0f, 100.0f));
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASCRIPT_Livello_Completato::OnPlayerOverlap);
 }
 
@@ -47,8 +47,8 @@ void ASCRIPT_Livello_Completato::BeginPlay()
 void ASCRIPT_Livello_Completato::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-}*/
-/*
+}
+
 // Funzione che viene chiamata quanod il player entra nel box di collisione
 void ASCRIPT_Livello_Completato::OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
@@ -68,4 +68,4 @@ void ASCRIPT_Livello_Completato::OnPlayerOverlap(UPrimitiveComponent* Overlapped
 			blv2_completato = true;
 		}
 	}
-}*/
+}

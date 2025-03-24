@@ -10,7 +10,7 @@
 *
 * =======================================================================================================================
 */
-/*
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -21,7 +21,7 @@
 	"UCLASS()" è una macro di UE5 che definisce la classe "PROVA_GITHUB_API ASCRIPT_Livello_Completato" come una classe di
 	Unreal Engine, rendendola disponibile per l'editor e il sistema di reflection
 */
-/*
+
 UCLASS()
 class PROVA_GITHUB_API ASCRIPT_Livello_Completato : public AActor
 {
@@ -43,7 +43,7 @@ public:
 		Dichiaro le due variabili booleane "blv1_completato" e "blv2_completato" e le rendo accessibili
 		ai blueprint tramite la macro "UPROPERTY(BlueprintReadWrite)"
 	*/
-	/*UPROPERTY(BlueprintReadWrite, Category = "SCRIPT Livello Completato")
+	UPROPERTY(BlueprintReadWrite, Category = "SCRIPT Livello Completato")
 	bool blv1_completato;
 
 	UPROPERTY(BlueprintReadWrite, Category = "SCRIPT Livello Completato")
@@ -53,22 +53,21 @@ public:
 		Dichiaro una variabile "livello_numero" in int32 che mi stabilisce in quale livello si trova l'attore.
 		La macro "UPROPERTY(EditAnywhere, BlueprintReadWrite)" la rende visibile e modificabile sia nel blueprint che nell'editor
 	*/
-	/*UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SCRIPT Livello Completato")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SCRIPT Livello Completato")
 	int32 livello_numero;
 
 	/*
 		Dichiaro la funzione che verrà chiamata quando un oggetto entra in collisione col trigger.
 		La macro "UFUNCTION()" la rende disponibile per il sistema di reflection
 	*/
-	/*UFUNCTION()
+	UFUNCTION()
 	void OnPlayerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OthrComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	/*
 		Dichiaro il componente "UboxComponent" che rappresenta il volume di collisione rettangolare.
 		La macro "UPROPERTY(VisibleAnywhere)" lo rende visibile nell'editor, ma non permette le modifiche
 	*/
-/*private:
+private:
 	UPROPERTY(VisibleAnywhere)
 	class UBoxComponent* TriggerBox;
 };
-*/
