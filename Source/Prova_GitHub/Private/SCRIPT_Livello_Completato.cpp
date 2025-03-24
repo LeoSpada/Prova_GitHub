@@ -13,6 +13,7 @@
 
 
 #include "SCRIPT_Livello_Completato.h"
+#include "GameFramework/Character.h"
 #include "Components/BoxComponent.h" // Include la definizine della classe "UBoxComponent", necessaria per creare il volume della collisione
 
 // Sets default values
